@@ -2,7 +2,7 @@
   "name": "movix",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://aishwaryaparab.github.io/movix/",
+  "homepage": "https://aishwaryaparab.github.io/movix",
   "type": "module",
   "scripts": {
     "predeploy" : "npm run build",

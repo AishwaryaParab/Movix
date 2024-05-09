@@ -58,7 +58,7 @@ const Header = () => {
 
     const searchQueryHandler = (event) => {
       if (event.key === "Enter" && query.length > 0) {
-        navigate(`/search/${query}`);
+        navigate(`/movix/search/${query}`);
 
         // to close the search bar after we navigate to another page after 1 sec
         setTimeout(() => {
@@ -69,9 +69,9 @@ const Header = () => {
 
     const navigationHandler = (type) => {
       if (type === 'movie') {
-        navigate("/explore/movie");
+        navigate("/movix/explore/movie");
       } else {
-        navigate("/explore/tv");
+        navigate("/movix/explore/tv");
       }
 
       setMobileMenu(false);
@@ -80,7 +80,7 @@ const Header = () => {
     return (
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
           <ContentWrapper>
-            <div className="logo" onClick={() => {navigate("/")}}>
+            <div className="logo" onClick={() => {navigate("/movix")}}>
               <img src={logo} alt="" />
             </div>
 

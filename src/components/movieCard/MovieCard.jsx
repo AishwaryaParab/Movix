@@ -19,7 +19,7 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
         <div
             className="movieCard"
             onClick={() =>
-                navigate(`/${data.media_type || mediaType}/${data.id}`)
+                navigate(`/movix/${data.media_type || mediaType}/${data.id}`)
             }
         >
             <div className="posterBlock">
