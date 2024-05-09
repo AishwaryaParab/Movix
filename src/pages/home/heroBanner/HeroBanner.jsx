@@ -20,8 +20,8 @@ const HeroBanner = () => {
     setBackground(bg);
   }, [data])
 
-  const searchQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {
+  const searchQueryHandler = () => {
+    if (query.length > 0) {
       navigate(`/movix/search/${query}`);
     }
   }
@@ -46,9 +46,11 @@ const HeroBanner = () => {
                 type="text"
                 placeholder="Search for a movie or tv show...."
                 onChange={(e) => setQuery(e.target.value)}
-                onKeyUp={searchQueryHandler}
+                onKeyUp={(event) => {
+                  event.key === "Enter" && searchQueryHandler();
+                }}
               />
-              <button>Search</button>
+              <button onClick={searchQueryHandler}>Search</button>
             </div>
           </div>
       </ContentWrapper>
